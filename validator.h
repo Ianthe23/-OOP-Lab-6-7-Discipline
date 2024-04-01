@@ -8,16 +8,16 @@ using std::string;
 
 class Validator {
 private:
-	void valideazaDenumire(const string& denumire);
+	static void valideazaDenumire(const string& denumire);
 
-	void valideazaOre(int ore);
+	static void valideazaOre(int ore);
 
-	void valideazaTip(const string& tip);
+	static void valideazaTip(const string& tip);
 
-	void valideazaProfesor(const string& profesor);
+	static void valideazaProfesor(const string& profesor);
 
 public:
-	void valideazaDisciplina(const Disciplina& disciplina);
+	static void valideazaDisciplina(const Disciplina& disciplina);
 };
 
 #endif /* VALIDATOR_H_ */
