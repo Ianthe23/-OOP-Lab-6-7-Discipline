@@ -62,7 +62,7 @@ void Tests::testConstructor_Getters() {
 
 	Disciplina test_implicit{};
 	assert(test_implicit.get_denumire().empty());
-	assert(test_implicit.get_ore() == -1);
+	assert(test_implicit.get_ore() == 0);
 	assert(test_implicit.get_tip().empty());
 	assert(test_implicit.get_profesor().empty());
 }
@@ -88,7 +88,8 @@ void Tests::testSetters() {
 
 void Tests::testToString() {
 	Disciplina test_disciplina{ "mate",3,"real","Alexe" };
-	assert(test_disciplina.to_string_print() == "\tDisciplina: mate;   Ore: 3;   Tip: real;   Profesor: Alexe.");
+	assert(test_disciplina.to_string_print() == "\t\033[1;33mDenumire: \033[0mmate;   \033[1;33mOre: \033[0m3;   "
+		"\033[1;33mTip: \033[0mreal;   \033[1;33mProfesor: \033[0mAlexe.");
 }
 
 void Tests::testOperatori() {

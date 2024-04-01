@@ -6,7 +6,7 @@ void Validator::valideazaDenumire(const string& denumire) {
 }
 
 void Validator::valideazaOre(int ore) {
-	if (ore < 0) {
+	if (ore <= 0) {
 		throw ValidatorException("Numar de ore invalid!\n");
 	}
 }

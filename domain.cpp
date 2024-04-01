@@ -9,7 +9,7 @@ using namespace std;
 // constructor implicit
 Disciplina::Disciplina() {
 	this->denumire = "";
-	this->ore = -1;
+	this->ore = 0;
 	this->tip = "";
 	this->profesor = "";
 }
@@ -65,8 +65,8 @@ const string& Disciplina::get_profesor() const {
 
 /// TO STRING PRINTARE
 string Disciplina::to_string_print() {
-	return "\tDisciplina: " + this->denumire + ";   Ore: " + to_string(this->ore) + 
-		   ";   Tip: " + this->tip + ";   Profesor: " + this->profesor + ".";
+	return "\t\033[1;33mDenumire: \033[0m" + this->denumire + ";   \033[1;33mOre: \033[0m" + to_string(this->ore) + 
+		   ";   \033[1;33mTip: \033[0m" + this->tip + ";   \033[1;33mProfesor: \033[0m" + this->profesor + ".";
 }
 
 

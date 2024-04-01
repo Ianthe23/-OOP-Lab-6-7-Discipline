@@ -1,8 +1,11 @@
-﻿#include "ui.h"
+﻿#include "domain.h"
+#include "repo.h"
+#include "service.h"
+#include "ui.h"
 #include "tests.h"
 
 #define RESET   "\033[0m"
-#define GREEN   "\033[32m"
+#define GREEN   "\033[1;32m"
 
 #include <iostream>
 
@@ -22,7 +25,14 @@ using namespace std;
 int main() {
 	Tests tests;
 	tests.testAll();
+
+	cout << GREEN << "Teste finalizate cu succes!\n\n" << RESET;
 	
-	cout << GREEN << "Teste finalizate cu succes!\n" << RESET;
-	//run();
+	Repo repo;
+	Validator validator;
+	Service controller(repo, validator);
+	Ui ui{ controller };
+
+	ui.run();
+	
 }
