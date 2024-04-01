@@ -4,8 +4,6 @@
 
 using namespace std;
 
-//using namespace std;
-
 // constructor implicit
 Disciplina::Disciplina() {
 	this->denumire = "";
