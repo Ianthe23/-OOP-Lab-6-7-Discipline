@@ -209,6 +209,7 @@ void Ui::run() {
 
 		switch (comanda) {
 		case 0:
+			cout << BLUE << "La revedere!\n" << RESET;
 			return;
 		case 1:
 			try {
